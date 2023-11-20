@@ -4,7 +4,7 @@
 }
 
 :root {
-    --main-color: #0065FC;
+    --main-color: rgb(0, 101, 252);
     --main-bg-color: #F2F2F2;
     --filter-bg-color: #DEEBFF;
 }
@@ -16,6 +16,7 @@
 body {
     display: flex;
     justify-content: center;
+    cursor: default;
 }
 
 .main-container {
@@ -90,7 +91,7 @@ header div{
 
 header img{
     width: 61.09px;
-    height: 19;
+    height: 19px;
     padding: 30px 0px;
 }
 
@@ -100,8 +101,6 @@ nav{
 }
 
 nav ul{
-    /*width: 244px;
-    height: 35px;*/
     display: flex;
     flex-direction: row;
     justify-content: space-between;
@@ -184,11 +183,6 @@ li:hover{
     font-weight: bold;
 }
 
-.search-bar-localisation img{
-    width: 14px;
-    height: 18px;
-}
-
 .search-bar-localisation form{
     width: 85%;
     display: flex;
@@ -207,7 +201,7 @@ li:hover{
     justify-content: center;
 }
 
-.search-bar button img{
+.search-bar button i{
     display: none;
 }
 
@@ -220,10 +214,13 @@ li:hover{
 
 .search-bar button{
     color: white;
+    font-size: 18px;
 }
 
 ::placeholder{
     opacity: 1;
+    font-size: 18px;
+    font-weight: bold;
 }
 
 
@@ -262,15 +259,10 @@ li:hover{
     align-items: center;
     justify-content: flex-start;
     padding-left: 1%;
-    gap: 2%;
+    gap: 5%;
     border: solid 2px #F2F2F2;
     border-radius: 25px; 
     box-sizing: border-box;
-}
-
-.filters-tab img{
-    width: 22px;
-    height: 22px;
 }
 
 .filters-tab:hover{
@@ -370,7 +362,6 @@ li:hover{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-    gap: auto;
     margin-left: 10px;
     width: auto;
     height: 100px;
@@ -531,6 +522,8 @@ footer h3{
 
 /****** Media queries ***********/
 /* Medium devices (tablets, less/equal than 1024px) */
+
+
 @media (max-width: 1024px) {
     .search-bar-localisation{
         width: 30%;
@@ -596,9 +589,17 @@ footer h3{
     .activités{
         height: 390.02px;
     }
+    .activités img{
+        height: 80%;
+    }
+    .activités-cards .card-content{
+        height: 20%;
+    }
 }
 
 /* Small devices (phones, less than 768px) */
+
+
 @media (max-width: 767.98px) {
     body{
         width: 100%;
@@ -688,7 +689,7 @@ footer h3{
         box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
     }
 
-    .search-bar button img{
+    .search-bar button i{
         display: block;
     }
 
